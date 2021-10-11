@@ -11,15 +11,15 @@
   <table>
     <thead>
       <tr>
-        <th>Destination</th>
-        <th>Arrival</th>
+        <th>Airport</th>
+        <th>Arrives at</th>
       </tr>
     </thead>
     <tbody>
       <% flight.destinations.forEach(function(dest) { %>
         <tr>
-          <td><%= dest.airline %></td>
-          <td><%= dest.arrival %></td>
+          <td><%= dest.airport %></td>
+          <td><%= dest.arrival.toLocaleString() %></td>
         </tr>
       <% }); %>
     </tbody>
@@ -30,7 +30,7 @@
 
 <form method="POST" action="/flights/<%= flight._id %>/destinations">
     <label>Destination:
-        <select name="airline">
+        <select name="airport">
             <option value="AUS">AUS</option>
             <option value="DFW">DFW</option>
             <option value="DEN">DEN</option>
