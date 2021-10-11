@@ -28,9 +28,10 @@
   <p>No Destinations Yet</p>
 <% } %>
 
-<form method="POST" action="/flights/<%= flight._id %>/destinations">
+<form id="add-dest" method="POST" action="/flights/<%= flight._id %>/destinations">
     <label>Destination:
         <select name="airport">
+            <option disabled selected value></option>
             <option value="AUS">AUS</option>
             <option value="DFW">DFW</option>
             <option value="DEN">DEN</option>

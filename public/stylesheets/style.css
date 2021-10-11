@@ -1,12 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #424748;
+}
+
+body, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
-  padding: 50px;
+  margin: 0;
+  height: 100vh;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+main {
+  width: 80vw;
 }
 
-td.passed {
+nav {
+  height: 8vh;
+  width: 100vw;
+  margin: 0 0 5vh 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  background-color: #003366;
+  box-shadow: 0vh 1vh 4vh #003366;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#add-dest {
+  margin: 4vh 0 0 0;
+}
+
+tr.passed {
   color: red;
 }
