@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+
+<h1>Showing flight #<%= flight.flightNo %>....</h1>
+
+<p><strong>Airline:</strong> <%= flight.airline %></p>
+<p><strong>Departs from:</strong> <%= flight.airport %></p>
+<p><strong>At:</strong> <%= flight.departs %></p>
+
+<h2>Destinations</h2>
+<% if (flight.destinations.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Destination</th>
+        <th>Arrival</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flight.destinations.forEach(function(dest) { %>
+        <tr>
+          <td><%= dest.airline %></td>
+          <td><%= dest.arrival %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } else { %>
+  <p>No Destinations Yet</p>
+<% } %>
+
+<form method="POST" action="/flights/<%= flight._id %>/destinations">
+    <label>Destination:
+        <select name="airline">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select>
+    </label><br>
+    <label>Arrival:
+        <input type="datetime-local" name="arrival">
+    </label><br>
+    <input type="submit" value="Add">
+</form>
+
+<%- include('../partials/footer') %>
