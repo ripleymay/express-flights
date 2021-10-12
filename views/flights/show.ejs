@@ -66,11 +66,12 @@
       <tbody>
         <% tickets.forEach(function(ticket) { %>
         <tr>
+          <td><%= ticket.seat %></td>
+          <td><%= ticket.price %></td>
           <td>
-            <%= ticket.seat %>
-          </td>
-          <td>
-            <%= ticket.price %>
+            <form action="/tickets/<%= ticket._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+            </form>
           </td>
         </tr>
         <% }); %>
