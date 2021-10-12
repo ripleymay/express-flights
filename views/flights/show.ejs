@@ -39,11 +39,11 @@
             <label>Destination:
               <select name="airport">
                 <option disabled selected value></option>
-                <option value="AUS">AUS</option>
-                <option value="DFW">DFW</option>
-                <option value="DEN">DEN</option>
-                <option value="LAX">LAX</option>
-                <option value="SAN">SAN</option>
+                <option <%= destns.includes('AUS') ? "disabled" : "" %> value="AUS">AUS</option>
+                <option <%= destns.includes('DFW') ? "disabled" : "" %> value="DFW">DFW</option>
+                <option <%= destns.includes('DEN') ? "disabled" : "" %> value="DEN">DEN</option>
+                <option <%= destns.includes('LAX') ? "disabled" : "" %> value="LAX">LAX</option>
+                <option <%= destns.includes('SAN') ? "disabled" : "" %> value="SAN">SAN</option>
               </select>
             </label><br>
             <label>Arrival:
