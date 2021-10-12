@@ -34,8 +34,12 @@ nav {
 }
 
 a {
-  color: white;
+  color: gold;
   text-decoration: none;
+}
+
+#flight-details {
+  display: flex;
 }
 
 #add-dest {
