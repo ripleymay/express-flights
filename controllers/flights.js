@@ -37,7 +37,6 @@ function show(req, res) {
         flight.destinations.sort((destn1, destn2) => destn1.arrival < destn2.arrival ? -1 : 1);
         const destns = flight.destinations.map(dest => dest.airport);
         Ticket.find({ flight: flight._id }, function (err, tickets) {
-            console.log(destns);
             res.render('flights/show', { flight, tickets, destns });
         });
     });

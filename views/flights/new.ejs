@@ -2,7 +2,7 @@
 
 <h1>Make a new flight...</h1>
 
-<form action="/flights" method="POST">
+<form id="add-flight" action="/flights" method="POST">
     <label>Airline:
         <select name="airline">
             <option disabled selected value></option>
@@ -26,7 +26,7 @@
     <label>Departs:
         <input type="datetime-local" name="departs" value=<%= departs %>>
     </label><br>
-    <input type="submit" value="Add Flight">
+    <input type="submit" value="Add Flight" class="button">
 </form>
 
 <%- include('../partials/footer') %>
