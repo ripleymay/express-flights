@@ -49,7 +49,7 @@
             <label>Arrival:
               <input type="datetime-local" name="arrival">
             </label><br>
-            <input type="submit" value="Add" class="button">
+            <input type="submit" value="Add Destination" class="button">
           </form>
   </section>
 
@@ -81,7 +81,7 @@
       <p>No Tickets Yet</p>
     <% } %>
 
-    <a href="/flights/<%= flight.id %>/tickets/new" class="button">New Ticket</a>
+    <a id="new-ticket" href="/flights/<%= flight.id %>/tickets/new" class="button">New Ticket</a>
   </section>
 
 </section>

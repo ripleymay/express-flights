@@ -38,6 +38,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
 nav > a {
   padding: 5px;
   border: 1px solid #003366;
@@ -49,10 +54,20 @@ nav > a:hover {
   background-color: gold;
 }
 
+#all-flights > th, td {
+  font-size: 16px;
+  text-align: center;
+  padding: 4px 12px;
+}
+
 #flight-details {
   display: flex;
   width: 80%;
   justify-content: space-evenly;
+}
+
+#destns > h2, #tickets > h2 {
+  text-align: center;
 }
 
 #add-dest {
@@ -62,6 +77,11 @@ nav > a:hover {
 #add-flight, #add-dest, #add-ticket, #tickets {
   display: flex;
   flex-direction: column;
+}
+
+#new-ticket {
+  margin: 20px 0 0 0;
+  text-align: center;
 }
 
 .delete {
